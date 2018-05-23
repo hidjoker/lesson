@@ -23,7 +23,7 @@ public class Operator_Quiz_01 {
 		//	- 평균 소숫점이하 둘째자리까지 표현가능하면 해보기
 		//	- 찾아봐야할것...
 	
-		Scanner input = new Scanner(System.in);
+		Scanner input = new Scanner(System.in);		
 		
 		System.out.print("국어 : ");
 		int kor = input.nextInt();
@@ -35,7 +35,6 @@ public class Operator_Quiz_01 {
 		
 		System.out.print("수학 : ");
 		int math = input.nextInt();
-		
 		
 		
 		System.out.println("국어 : " + kor);
