@@ -27,7 +27,17 @@ public class ForEx_06_ÀÌÇö¿ì {
 		for(int i = 1; i < 10 ; i++) {
 			int num = i * 2;
 			System.out.println(" 2 x " + i + " = " + num);
-					}
+				
+		
+		
+			
+			
+		
+		
+		}
+		
+		
+		
 						
 	}
 	
