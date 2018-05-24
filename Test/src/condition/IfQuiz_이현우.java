@@ -67,7 +67,7 @@ public class IfQuiz_이현우 {
 			System.out.println("가장 큰 수는 " + num2);
 		}else {
 			System.out.println("가장 큰 수는 " + num3);
-		}
+		}	
 		
 		// 4번 //
 			
