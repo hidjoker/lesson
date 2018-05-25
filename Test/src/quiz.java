@@ -7,7 +7,7 @@ public class quiz {
 	public static void main(String[] args) {
 		
 		int x =5, y=5;
-		String key = "Ω√¿€";
+		String key = "start";
 		
 		Scanner sc = new Scanner(System.in);
 		int num1 = 1, num2 = 1 ;

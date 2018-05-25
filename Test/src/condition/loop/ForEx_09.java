@@ -17,6 +17,7 @@ public class ForEx_09 {
 				// 9È¸, 1~9
 				
 				// ÃÑ 72È¸
+				
 				System.out.println(dan + " x " + i + "=" + (dan*i));
 				
 			}
