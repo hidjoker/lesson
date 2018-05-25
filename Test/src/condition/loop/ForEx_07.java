@@ -38,23 +38,48 @@ public class ForEx_07 {
 		
 		// 입력한 수의 약수를 모두 구하시오(약수 = 어떤 수를 나누어 떨어뜨리는 수)
 			
-		System.out.println(" Input Num : ");
+		System.out.print(" Input Num : ");
 		Scanner sc = new Scanner(System.in); 
 		int num = sc.nextInt();
+		int m=0;
 		
-		for(int n=2 ; n < 200 ;n++) {
-			for(int m=1 ; num % n ==0 ; m++) {  
-                int out = m * n;
-				System.out.print(out + " ");
-			}
+		for(int n=1 ; n <= num ;n++) {
 			
+			if(num % n ==0) {
+				System.out.print(n + " ");
+               m++;               
+							}
+			
+			if(m==6) {
+				System.out.println();
+				m=1;
 				
 			}
+				
+		
+	}
+
+	}}
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		
 				
 			
-		}
+		
 		
 			
 		
@@ -66,7 +91,5 @@ public class ForEx_07 {
 		// 증감식 : n++
 			
 			
-		
-	}
 	
 
