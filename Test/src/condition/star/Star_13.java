@@ -1,12 +1,12 @@
 package condition.star;
 
-public class Star_12 {
+public class Star_13 {
 
 	public static void main(String[] args) {
 		
 	for(int n=0 ; n <5 ; n++) {
 			
-			for(int m=0 ; m<n+1 ; m++) {
+			for(int m=0 ; m<5-n ; m++) {
 							
 				System.out.print("*");				
 			
@@ -17,7 +17,7 @@ public class Star_12 {
 		
 	for(int n=0 ; n <5 ; n++) {
 		
-		for(int m=0 ; m<5-n ; m++) {
+		for(int m=0 ; m<n+1; m++) {
 	
 			System.out.print("*");		
 	

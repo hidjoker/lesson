@@ -8,7 +8,7 @@ public class Star_11 {
 			
 			for(int m=0 ; m<5 ; m++) {
 				
-				if(m>=n) {
+				if(m>=4-n) {
 				System.out.print("*");
 				}else {
 					System.out.print(" ");
