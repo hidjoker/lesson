@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Quiz_condition {
+public class Quiz_condition_loop {
 
 	public static void main(String[] args) {
 		

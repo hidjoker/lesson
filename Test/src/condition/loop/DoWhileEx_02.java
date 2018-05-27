@@ -24,8 +24,7 @@ public class DoWhileEx_02 {
 			System.out.println(num);
 		}while(num != 99);
 		
-		
-		
+	
 				
 		
 	}

@@ -1,4 +1,4 @@
-package condition;
+
 
 import java.util.Scanner;
 
@@ -25,13 +25,17 @@ public class IfEx_03_이현우 {
 			
 		}
 		
-		if(num >= 0) 
+		else if(num > 0) 
 		{
 			System.out.println("양수");
 			
 		}
 		
-		
+		else if(num ==0){
+			
+			System.out.println("0입니다");
+			
+		}
 		
 		
 		
