@@ -29,6 +29,7 @@ public class Quiz_condition_loop {
 		int res1=0, res2=0;
 		
 		for(int i=2 ; i<num1 ||i<num2 ; i++) {
+
 			if(m % i ==0) {
 				
 				v = m / i;
@@ -55,6 +56,70 @@ public class Quiz_condition_loop {
 		   System.out.println("최대공약수 : "+res1 +" , 최소공배수 : " + res2 );
 		}
 				
+		// 최대공약수
+		// num1    num2   
+		// 24      32
+		
+		// 1        1
+		// 2        2
+		// 3        4
+		// 4        8
+		// 6        16
+		// 8        32
+		// 12       
+		// 24       
+
+		
+//      - 최대공약수 풀이	-	
+//      방법1.		
+//		int min = num1 < num2 ? num1 : num2 ;
+//      int gcd = 1; // 최대공약수
+//		for(int i=1 ; i<=min ; i++){
+//		 if( num1 % i==0 && num2 % i==0){ //공약수
+//		gcd=i;
+//  	}
+//      }
+//		System.out.println("최대공약수 : " + gcd);
+		
+//      방법2.
+//		int gcd = 1; //최대공약수
+//		for(int i = min ; i>=1 ; i --){
+//		   if( num1 % i ==0 && num2 % i ==0) { //공약수
+//		gcd =i;
+//		break;
+//   	}
+//      }
+		
+//		- 최소공배수 풀이 - 
+
+//		num1      num2
+//  	 3         4
+
+//		 3         4
+//		 6         8
+//	     9        12
+//		12        16
+//      15
+
+		
+//		주어진 숫자 중 큰 값으로부터 1씩 증가시키면서
+//		두 숫자 모두에게 나누어 떨어지는 첫번째 값 -> 최소공배수
+		
+		
+//		int max = num1 > num2 ? num1 : num2 ;
+//		for(int i=max ; true ; i++) {
+//		   if( i%num1==0 && i%num2==0){
+//		      System.out.println("최소공배수 : " + i);
+//		      break;
+//	      }
+//	  	}
+		
+		
+		
+		
+		
+	
+		
 		
 		
 		//3번 //
@@ -62,7 +127,11 @@ public class Quiz_condition_loop {
 		System.out.print("Input Number : ");
 		num = sc.nextInt();
 		int k=0;
-		for(int i=1 ; i <=num ; i++) {
+		
+		// 1부터 주어진 숫자까지 1씩 증가시키며 모든 정수를 나누었을 때
+		// 나머지가 0인 숫자들(약수)들만 출력한다
+		
+		for(int i=1 ; i <=num ; i++) {  // 1 ~ num
 			if(num % i ==0) {
 				System.out.print(i+" ");
 				k++;
@@ -120,13 +189,15 @@ public class Quiz_condition_loop {
 					bb=0;
 			}
 		}
-		
+
+
 
 		
 }
 }
 		
-		
+
+
 	
 	
 	
