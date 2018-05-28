@@ -1,0 +1,38 @@
+package array;
+
+public class ArrayCopyEx_01 {
+
+	public static void main(String[] args) {
+		
+		int[] arr1 = {10, 20, 30};
+		int[] arr2;
+		
+		
+		// 얕은 복사 (shallow copy)
+		// 참조값만 복사될 때
+		
+		// 같은 대상을 참조하고 있으므로 값이 변하면 둘 다 반영된다
+		
+		
+		arr2 = arr1;
+
+		
+		System.out.println("-----수정 전-----");
+		for(int i=0 ; i<3 ; i++) {
+			
+			System.out.println(arr1[i]+" : "+arr2[i]);
+						
+		}
+	
+		arr1[1] = 7777; 
+		
+		System.out.println("-----수정 후-----");
+		for(int i=0 ; i<3 ; i++) {
+			
+			System.out.println(arr1[i]+" : "+arr2[i]);
+						
+		}
+		
+	}
+	
+}
