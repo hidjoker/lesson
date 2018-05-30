@@ -27,7 +27,7 @@ public class Test {
 		
 		System.out.println("Hello, Java"); //문장을 출력하는 코드 
 		
-	}
+
 	
 //	ctrl + shift + c
 //	주석작성

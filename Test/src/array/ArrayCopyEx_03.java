@@ -26,10 +26,7 @@ public class ArrayCopyEx_03 {
 		System.arraycopy(arr1, 0 , arr2, 0, arr1.length);
 				
 
-        for(int i=0 ; i < arr2.length ; i++) {
-		    arr2[i] = arr1[i];
-        }
-		
+    
 		System.out.println("-----¼öÁ¤ Àü-----");
 		for(int i=0 ; i<3 ; i++) {
 			

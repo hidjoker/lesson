@@ -11,7 +11,7 @@ public class ArrayEtc_02 {
 		
 		System.out.println("-----정렬 전-----");
 		for(int i=0; i<arr.length ; i++) {
-			System.out.println(arr[i] + " ");
+			System.out.print(arr[i] + " ");
 		}
 		System.out.println();
 				
@@ -20,7 +20,7 @@ public class ArrayEtc_02 {
 		
 		System.out.println("-----정렬 후-----");
 		for(int i=0 ; i<arr.length ; i++) {
-			System.out.println(arr[i] + " ");
+			System.out.print(arr[i] + " ");
 		}
 		System.out.println();				
 		

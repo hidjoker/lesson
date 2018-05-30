@@ -93,35 +93,39 @@ public class Quiz2_array_solve {
 
 		int c=0;
 		int d=0;
+		int save=0;
 		int e=0;
 		int over_arr[] = new int[arr.length];
 		int ret_arr[] = new int[arr.length];
 
-		for(int i=1; i<=arr.length ; i++) {
+		for(int i=arr.length; i>0 ; i--) {
 			for(int q=0 ; q<arr.length ; q++) {
 				if(i==rank_arr[q]) {
 					c++;
+					save=q;
 				}
 			}
 			if(c==2) {
-				over_arr[d] = arr[i-1];
+				over_arr[d] = arr[save];
 				d++;
 				c=0;
-			}else {
-				ret_arr[e] = arr[i-1];
+				save=0;
+			}else if(c==1) {
+				ret_arr[e] = arr[save];
 				e++;
 				c=0;
+				save=0;
 			}
 		}
 
 
 		System.out.println("----------5¹ø-------");   
 
-		for(int i=0; i<=d ; i++) {
+		for(int i=0; i<d ; i++) {
 			System.out.print(over_arr[i]+" ");
 		}
 		System.out.println();
-		for(int i=0; i<=e ; i++) {
+		for(int i=0; i<e ; i++) {
 			System.out.print(ret_arr[i]+" ");
 
 		
