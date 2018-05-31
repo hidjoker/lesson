@@ -16,7 +16,7 @@ public class MainClass_defaultTest {
 
         
 //      ce.num1 = 100;   // default 접근 제한 에러
-        ce.setNum1(100); // 접근 제한 public을 이용한 mathod
+        ce.setNum1(100); // 접근 제한 public을 이용한 method
 	 
 	 
 
