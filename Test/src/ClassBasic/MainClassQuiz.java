@@ -15,18 +15,30 @@ public class MainClassQuiz {
 		
 		System.out.print("Input Number1 : ");
 		int num1 = sc.nextInt();
-		System.out.println("Input Number2 : ");
+		System.out.print("Input Number2 : ");
 		int num2 = sc.nextInt();
-		System.out.println("연산자 입력 : ");
+		sc.skip("\r\n");
+		System.out.print("연산자 입력 : ");
 		String str = sc.nextLine();
 		char op = str.charAt(0);
 		
 		switch(op) {
 		case '+' :
-			System.out.println(num1 + "+" + num2 "=" + mq.sum(num1, num2) );
+			System.out.println(num1 + "+" + num2 +"=" + mq.sum(num1, num2) );
 			break;
 		case '-' :	
-		
+			System.out.println(num1 + "-" + num2 +"=" + mq.sub(num1, num2));
+			break;
+		case '*' :
+			System.out.println(num1 + "*" + num2 +"=" + mq.mul(num1, num2));
+			break;
+		case '/' :
+			System.out.println(num1 + "/" + num2 + "=" + mq.div(num1, num2));
+			break;
+		default :
+			System.out.println("잘못 입력했습니다");
+		}
+			
 		}
 		
 		
@@ -40,4 +52,4 @@ public class MainClassQuiz {
 	
 	
 
-}
+
