@@ -1,0 +1,15 @@
+--------------------
+class StudentService
+--------------------
+- stu : Student
+--------------------
+<<constructor>>
++ StudentService()
+
+<<method>>
++ insertInfo() : void
++ insertScore() : void
++ calcSum() : void
++ calcAvg() : void
++ printStu() : void
+--------------------
