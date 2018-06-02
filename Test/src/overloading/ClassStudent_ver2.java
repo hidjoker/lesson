@@ -4,15 +4,15 @@ public class ClassStudent_ver2 {
 
 	// class student //
 	
-	private String stuArr[]= new String[3];
-	private int ageArr[] = new Int[3];
+	private String name;
+	private int age;
 	
-	private int korArr[] = new int[3];
-	private int engArr[] = new int[3];
-	private int mathArr[] = new int[3];
+	private int kor;
+	private int eng;
+	private int math;
 	
-	private int sumArr[] = new int[3];
-	private double avgArr[] = new double[3];
+	private int sum;
+	private double avg;
 	
 	
 	// Setter //
@@ -64,7 +64,6 @@ public class ClassStudent_ver2 {
 		return this.avg;
 	}
 	
-	
-	
+
 	
 }
