@@ -1,76 +1,101 @@
 
 public class findtrap {
 
-	int[][] arr;
+	private int[][] arr;
 	
 	
 	public findtrap() {
+		
 		arr = new int[10][10];		
 	}
 	
-	//ÆøÅº ÀÔ·Â//
+	//ÆøÅº°ª ÀÔ·Â//
 	
-	public void trap(int[][] arr){
+	public void trap(){
 		
 		// 9 = ÆøÅº 
-		arr[3][2] = 9;
-		arr[0][6] = 9;
-		arr[2][8] = 9;
-		arr[1][7] = 9;
-		arr[8][9] = 9;
-		arr[5][5] = 9;
-		arr[3][9] = 9;
-		arr[1][4] = 9;
-		arr[0][8] = 9;
-		arr[9][6] = 9;
+		this.arr[3][2] = 9;
+		this.arr[0][6] = 9;
+		this.arr[2][8] = 9;
+		this.arr[1][7] = 9;
+		this.arr[8][9] = 9;
+		this.arr[5][5] = 9;
+		this.arr[3][9] = 9;
+		this.arr[1][4] = 9;
+		this.arr[0][8] = 9;
+		this.arr[9][6] = 9;
 					
 	}
 	
-	//¹è¿­°ª °è»ê//
+	//¹è¿­°ª °è»ê ¹× ÀÔ·Â//
 	
-	public void set(int[][] arr) {
+	public void set() {
 		
 		for(int i=0; i<10; i++) {
 			for(int q=0 ; q<10 ;q++) {
 				
-				if(arr[i][q]==9) {
-				
-						
+				if(arr[i][q]>=9) {
+					if(i!=0) {
 					arr[i-1][q]+=1;
-	                arr[i-1][q-1]+=1;
-					arr[i-1][q+1]+=1;
-					arr[i][q+1]+=1;
-					arr[i][q-1]+=1;
-					arr[i+1][q-1]+=1;
-					arr[i+1][q]+=1;
-					arr[i+1][q+1]+=1;
+					if(q!=0) arr[i-1][q-1]+=1;
+					if(q!=9) arr[i-1][q+1]+=1;
+					}
 					
-			  }
-
-				
+					if(q!=9) arr[i][q+1]+=1;
+					if(q!=0) arr[i][q-1]+=1;
+					
+					if(i!=9) {
+				    if(q!=0) arr[i+1][q-1]+=1;
+					arr[i+1][q]+=1;
+					if(q!=9) arr[i+1][q+1]+=1;
+					}
+				}
+								
+			 }
+		}	
+	}
+	
+	
+	// ÆøÅº °ª º¸Á¤ //
+	
+	public void trapinit() {
+		for(int i=0 ; i<10 ; i++) {
+			for(int q=0 ; q<10 ; q++) {
+			  if(arr[i][q]>=9)arr[i][q] = 9;
 			}
-			
 		}
 		
-						
 	}
+	// Ãâ·ÂºÎ //
 	
 	
-	
-	public static void main(String[] args) {
-		
-		int[][] arr = new int[10][10];
-		
-		
-		
-		
-		
-		
-		
-		
+	public void printout() {
+		System.out.println("============");
+		for(int i=0 ; i<10 ; i++) {
+			for(int q=0 ; q<10 ; q++) {
+				System.out.print(arr[i][q]);
+			}
+			System.out.println();
+			
+		}
+		System.out.println("============");
+
 	}
-	
-	
-	
 	
 }
+
+// ½ÇÇà Å¬·¡½º //
+
+class findtrap_ver{
+
+	public static void main(String[] args) {
+		
+		findtrap ft = new findtrap();
+		ft.trap();
+		ft.set();
+		ft.trapinit();
+		ft.printout();
+	}		
+	
+}
+

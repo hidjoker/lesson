@@ -85,7 +85,7 @@ public class Exam_ver2 {
 					
 				case STU_MENU:
 					System.out.println("\t    1-3-1. (ALL) 인적+성적 모두 입력");
-//					System.out.println("\t    1-3-IDX. 인적+성적 선택 입력");
+					System.out.println("\t    1-3-IDX. 인적+성적 선택 입력");
 					
 					select = selectMenu();
 					switch(select) {
@@ -94,7 +94,7 @@ public class Exam_ver2 {
 						break;
 						
 					case IDX_MENU:
-//						ss.insertStu(idx);
+						ss.insertStuIdx();
 						break;
 					}
 					break;
