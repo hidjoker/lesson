@@ -31,7 +31,7 @@ class Child03 extends Parent03{
 }
 public class InheritEx_03 {
 	public static void main(String[] args) {
-		Child03 c = new Child03();   
+		Child03 c = new Child03();   // 자식클래스 생성자 호출하면 자동으로 부모클래스 생성자 먼저 호출됨
 	}
 }
 

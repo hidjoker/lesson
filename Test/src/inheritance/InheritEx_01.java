@@ -51,13 +51,13 @@ public class InheritEx_01 {
 		p.num = 111;
 		System.out.println(p.num);
 		
-		Child c = new Child();
+		Child c = new Child(); 
 		c.num = 222;
 		System.out.println(c.num);
 
 		System.out.println("-------");
 		p.display();
-		c.display();
+		c.display();   
 		c.print();
 		
 	

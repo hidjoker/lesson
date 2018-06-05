@@ -12,6 +12,7 @@ public class PersonEx {
 		Product prod1 = new Tv("LG", 500);
 		Product prod2 = new Computer("i5", 500);
 		
+		
 		p.buy(prod1);
 		p.buy(prod2);
 
