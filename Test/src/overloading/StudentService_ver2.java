@@ -8,26 +8,18 @@ public class StudentService_ver2 {
 	
 	Scanner sc;
 	
-	ClassStudent_ver2 stu2a;
-	ClassStudent_ver2 stu2b;
-	ClassStudent_ver2 stu2c;
-	
 	private int idx;
-	private String[] stuArr;
+	private ClassStudent_ver2[] stuArr;
 
 	
 	
 	//생성자 //
 	
 	public StudentService_ver2() {
-		
-		stu2a = new ClassStudent_ver2();
-		stu2b = new ClassStudent_ver2();
-		stu2c = new ClassStudent_ver2();
-	
+		for(int i=0; i<stuArr.length ; i++) {
+			stuArr[i] = new ClassStudent_ver2();
+		}
 		sc=new Scanner(System.in);
-		
-		stuArr = new String[3];
 	}
 	
 	//인덱스 getter//
@@ -38,139 +30,68 @@ public class StudentService_ver2 {
 	
 	//학생 인적 선택 입력//
 	
-	private void insertInfo(String stu,int index) {
-			
-		if(idx==0) {
-		System.out.print("["+idx+"번]Input name : ");
-		stu2a.setName(sc.nextLine());
-		System.out.print("["+idx+"번]Input age : ");
-		stu2a.setAge(sc.nextInt());
-		stuArr[idx]=stu2a.getName();
-		sc.skip("\r\n");
-		}
-		
-		if(idx==1) {
-			System.out.print("["+idx+"번]Input name : ");
-			stu2b.setName(sc.nextLine());
-			System.out.print("["+idx+"번]Input age : ");
-			stu2b.setAge(sc.nextInt());
-			stuArr[idx]=stu2b.getName();
-			sc.skip("\r\n");
-		}
-		
-		if(idx==2) {
-			System.out.print("["+idx+"번]Input name : ");
-			stu2c.setName(sc.nextLine());
-			System.out.print("["+idx+"번]Input age : ");
-			stu2c.setAge(sc.nextInt());
-			stuArr[idx]=stu2c.getName();
-			sc.skip("\r\n");
-		}
+	private void insertInfo(ClassStudent_ver2 stu,int idx) {
+		   System.out.print(idx+"번째 학생 이름 : ");
+		   stu.setName(sc.nextLine());
+		   System.out.println(idx+"번째 학생 나이 : ");
+		   stu.setAge(sc.nextInt());
+		   sc.skip("\r\n");	   
 	}
 	
 	//학생 인적 전체 입력//
 	
-	public void insertInfoAll() {		
-		System.out.print("[0번]Input name : ");
-		stu2a.setName(sc.nextLine());
-		System.out.print("[0번]Input age : ");
-		stu2a.setAge(sc.nextInt());
-		sc.skip("\r\n");
-		stuArr[0]=stu2a.getName();
-		System.out.print("[1번]Input name : ");
-		stu2b.setName(sc.nextLine());
-		System.out.print("[1번]Input age : ");
-		stu2b.setAge(sc.nextInt());
-		sc.skip("\r\n");
-		stuArr[1]=stu2b.getName();
-		System.out.print("[2번]Input name : ");
-		stu2c.setName(sc.nextLine());
-		System.out.print("[2번]Input age : ");
-		stu2c.setAge(sc.nextInt());
-		stuArr[2]=stu2c.getName();
-		sc.skip("\r\n");
+	public void insertInfoAll() {	
+		System.out.println(" + + 학생 정보 입력 + +");
+		for(int i=0 ; i<stuArr.length ; i++) {
+			   System.out.print(idx+"번째 학생 이름 : ");
+			   stuArr[i].setName(sc.nextLine());
+			   System.out.println(idx+"번째 학생 나이 : ");
+			   stuArr[i].setAge(sc.nextInt());
+			   sc.skip("\r\n");	   
+			}
 	}
 	
 	//인적 인덱스 입력//
 	
 	public void insertInfoIdx() {
+		System.out.println(" + + 학생 정보 선택 입력 + + ");
 		System.out.print("Input Index : ");
-		this.idx=sc.nextInt();
+		this.idx=sc.nextInt()+1;
 		sc.skip("\r\n");
-		insertInfo(stuArr[getIdx()],getIdx());
-		
+		insertInfo(stuArr[idx-1],idx);		
 	}
 	
 	
 	//학생 점수 선택 입력 //
 	
-	private void insertScore(String stu,int idx) {
+	private void insertScore(ClassStudent_ver2 stu,int idx) {
 		
-		if(idx==0) {
-		System.out.print("[0번]국어 점수 : ");
-		stu2a.setKor(sc.nextInt());
-		System.out.print("[0번]영어 점수 : ");
-		stu2a.setEng(sc.nextInt());
-		System.out.print("[0번]수학 점수 : ");
-		stu2a.setMath(sc.nextInt());
-		this.calcSum(stuArr[0]);
-		this.calcAvg(stuArr[0]);
+		System.out.print(idx+"번째 학생의 국어 점수 : ");
+		stu.setKor(sc.nextInt());
+		System.out.print(idx+"번째 학생의 영어 점수 : ");
+		stu.setEng(sc.nextInt());
+		System.out.print(idx+"번째 학생의 수학 점수 : ");
+		stu.setMath(sc.nextInt());
+		this.calcSum(stuArr[idx-1]);
+		this.calcAvg(stuArr[idx-1]);
 		sc.skip("\r\n");
-		}
-		if(idx==1) {
-			System.out.print("[1번]국어 점수 : ");
-			stu2b.setKor(sc.nextInt());
-			System.out.print("[1번]영어 점수 : ");
-			stu2b.setEng(sc.nextInt());
-			System.out.print("[1번]수학 점수 : ");
-			stu2b.setMath(sc.nextInt());
-			this.calcSum(stuArr[1]);
-			this.calcAvg(stuArr[1]);
-			sc.skip("\r\n");
-		}
-		if(idx==2) {
-			System.out.print("[2번]국어 점수 : ");
-			stu2c.setKor(sc.nextInt());
-			System.out.print("[2번]영어 점수 : ");
-			stu2c.setEng(sc.nextInt());
-			System.out.print("[2번]수학 점수 : ");
-			stu2c.setMath(sc.nextInt());
-			this.calcSum(stuArr[2]);
-			this.calcAvg(stuArr[2]);
-			sc.skip("\r\n");
-
-		}
-			
+		
 	}
 	
 	//학생 점수 전체 입력//
 	
 	public void insertScoreAll() {
-		System.out.print("[0번]국어 점수 : ");
-		stu2a.setKor(sc.nextInt());
-		System.out.print("[0번]영어 점수 : ");
-		stu2a.setEng(sc.nextInt());
-		System.out.print("[0번]수학 점수 : ");
-		stu2a.setMath(sc.nextInt());
-		this.calcSum(stuArr[0]);
-		this.calcAvg(stuArr[0]);
-		System.out.print("[1번]국어 점수 : ");
-		stu2b.setKor(sc.nextInt());
-		System.out.print("[1번]영어 점수 : ");
-		stu2b.setEng(sc.nextInt());
-		System.out.print("[1번]수학 점수 : ");
-		stu2b.setMath(sc.nextInt());
-		this.calcSum(stuArr[1]);
-		this.calcAvg(stuArr[1]);
-		System.out.print("[2번]국어 점수 : ");
-		stu2c.setKor(sc.nextInt());
-		System.out.print("[2번]영어 점수 : ");
-		stu2c.setEng(sc.nextInt());
-		System.out.print("[2번]수학 점수 : ");
-		stu2c.setMath(sc.nextInt());		
-		this.calcSum(stuArr[2]);
-		this.calcAvg(stuArr[2]);
-		sc.skip("\r\n");
+		for(int i=0 ; i<stuArr.length ; i++) {
+			System.out.print((i+1)+"번째 학생의 국어 점수 : ");
+			stuArr[i].setKor(sc.nextInt());
+			System.out.print((i+2)+"번째 학생의 영어 점수 : ");
+			stuArr[i].setEng(sc.nextInt());
+			System.out.print((i+3)+"번째 학생의 수학 점수 : ");
+			stuArr[i].setMath(sc.nextInt());
+			this.calcSum(stuArr[i]);
+			this.calcAvg(stuArr[i]);
+			sc.skip("\r\n");
+		}
 
 	}
 	// 학생 성적 인덱스 입력//
@@ -179,60 +100,32 @@ public class StudentService_ver2 {
 		System.out.print("Input Index : ");
 		this.idx=sc.nextInt();	
 		sc.skip("\r\n");
-		insertScore(stuArr[getIdx()], getIdx());
+		insertScore(stuArr[idx-1], getIdx());
 	}
 	
 
 	
 	//학생 인적+성적 전체 입력//
 	public void insertStuAll() {
-		System.out.print("[0번]Input name : ");
-		stu2a.setName(sc.nextLine());
-		System.out.print("[0번]Input age : ");
-		stu2a.setAge(sc.nextInt());
-		sc.skip("\r\n");
-		stuArr[0]=stu2a.getName();
-		System.out.print("[0번]국어 점수 : ");
-		stu2a.setKor(sc.nextInt());
-		System.out.print("[0번]영어 점수 : ");
-		stu2a.setEng(sc.nextInt());
-		System.out.print("[0번]수학 점수 : ");
-		stu2a.setMath(sc.nextInt());
-		this.calcSum(stuArr[0]);
-		this.calcAvg(stuArr[0]);
-		sc.skip("\r\n");
-		
-		System.out.print("[1번]Input name : ");
-		stu2b.setName(sc.nextLine());
-		System.out.print("[1번]Input age : ");
-		stu2b.setAge(sc.nextInt());
-		sc.skip("\r\n");
-		stuArr[1]=stu2b.getName();
-		System.out.print("[1번]국어 점수 : ");
-		stu2b.setKor(sc.nextInt());
-		System.out.print("[1번]영어 점수 : ");
-		stu2b.setEng(sc.nextInt());
-		System.out.print("[1번]수학 점수 : ");
-		stu2b.setMath(sc.nextInt());
-		this.calcSum(stuArr[1]);
-		this.calcAvg(stuArr[1]);
-		sc.skip("\r\n");
-		
-		System.out.print("[2번]Input name : ");
-		stu2c.setName(sc.nextLine());
-		System.out.print("[2번]Input age : ");
-		stu2c.setAge(sc.nextInt());
-		stuArr[2]=stu2c.getName();
-		sc.skip("\r\n");	
-		System.out.print("[2번]국어 점수 : ");
-		stu2c.setKor(sc.nextInt());
-		System.out.print("[2번]영어 점수 : ");
-		stu2c.setEng(sc.nextInt());
-		System.out.print("[2번]수학 점수 : ");
-		stu2c.setMath(sc.nextInt());		
-		this.calcSum(stuArr[2]);
-		this.calcAvg(stuArr[2]);
-		sc.skip("\r\n");					
+		System.out.println(" + + 학생 정보 입력 + +");
+		for(int i=0 ; i<stuArr.length ; i++) {
+			   System.out.print(idx+"번째 학생 이름 : ");
+			   stuArr[i].setName(sc.nextLine());
+			   System.out.println(idx+"번째 학생 나이 : ");
+			   stuArr[i].setAge(sc.nextInt());
+			   sc.skip("\r\n");	   
+			}
+		for(int i=0 ; i<stuArr.length ; i++) {
+			System.out.print((i+1)+"번째 학생의 국어 점수 : ");
+			stuArr[i].setKor(sc.nextInt());
+			System.out.print((i+2)+"번째 학생의 영어 점수 : ");
+			stuArr[i].setEng(sc.nextInt());
+			System.out.print((i+3)+"번째 학생의 수학 점수 : ");
+			stuArr[i].setMath(sc.nextInt());
+			this.calcSum(stuArr[i]);
+			this.calcAvg(stuArr[i]);
+			sc.skip("\r\n");
+	  }
 	}
 	
 	//학생 인적+성적 선택 입력//
@@ -301,22 +194,15 @@ public class StudentService_ver2 {
 	
 	//총점계산//
 	
-	public void calcSum(String name) {
-		if(name==stuArr[0])
-		stu2a.setSum(stu2a.getKor()+stu2a.getEng()+stu2a.getMath());
-		if(name==stuArr[1])
-		stu2b.setSum(stu2b.getKor()+stu2b.getEng()+stu2b.getMath());
-		if(name==stuArr[2])
-		stu2c.setSum(stu2c.getKor()+stu2c.getEng()+stu2c.getMath());
+	public void calcSum(ClassStudent_ver2 stu) {
+		stu.setSum(stu.getKor()+stu.getEng()+stu.getMath());
 	}
 	
 	
 	//평균계산//
 	
-	public void calcAvg(String name) {
-		stu2a.setAvg(Math.round((stu2a.getKor()+stu2a.getEng()+stu2a.getMath())*100/(double)3)/(double)100);
-		stu2b.setAvg(Math.round((stu2b.getKor()+stu2b.getEng()+stu2b.getMath())*100/(double)3)/(double)100);		
-		stu2c.setAvg(Math.round((stu2c.getKor()+stu2c.getEng()+stu2c.getMath())*100/(double)3)/(double)100);
+	public void calcAvg(ClassStudent_ver2 stu) {
+		stu.setAvg(Math.round((stu.getKor()+stu.getEng()+stu.getMath())*100/(double)3)/(double)100);
 	}
 	
 	//선택 출력//

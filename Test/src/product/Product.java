@@ -13,8 +13,6 @@ public class Product {
 		
 	}
 	
-	
-	
 	// Getter & Setter //
 	
 	

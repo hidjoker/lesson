@@ -82,7 +82,6 @@ public class InheritEx_04 {
 		pc.display(); // 오버라이딩 상황에서 인스턴스된 Child04.display()
 
 		// 호출 안됨. 오버라이딩 상황이 아니면 선언된 데이터 타입을 보고 결정함 
-//		pc.out();
 		
 		((Child04)pc).out();
 		

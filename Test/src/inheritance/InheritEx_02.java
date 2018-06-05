@@ -21,7 +21,7 @@ class Child02 extends Parent02{
 	
 	private int num;
 	
-	public void display() {
+	public void display1() {
 		
 		System.out.println("num : "+ num);
 	

@@ -2,13 +2,13 @@ package product;
 
 public class Tv extends Product {
 	
-	
 	public Tv(String model, int price) {
 	    super(model,price);
 	}	
 	@Override
 	public void out() {
-		System.out.println("Tv입니다");
+		System.out.println("TV입니다");
 	}
  
 }
+

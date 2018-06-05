@@ -30,7 +30,7 @@ class Child extends Parent{
 	}
 	
 	
-	@Override  // 어노테이션, annotation	
+	@Override  // @ 어노테이션, annotation	
 	public void display() {
 		System.out.println("재정의 메소드");	
 	}	

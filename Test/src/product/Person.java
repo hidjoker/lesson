@@ -3,7 +3,7 @@ package product;
 public class Person {
 	
 	private String name;
-	private int money;
+	private static int MONEY;
 	private Product prob;
 	
 	public Person(String name,int money) {
@@ -11,11 +11,12 @@ public class Person {
 		setMoney(money);
 	}
 	
-	public void buy(Product prob) {
-		this.prob = new prob();
-		setMoney()
-		prob.out();
-		
+	public void buy(Product prod) {
+		setProb(prod);
+		prod.out();
+		Person.MONEY -= prod.getPrice();
+		System.out.println(this.name+"님이 "+prod.price+"원을 지불하고 "+prod.model+"을 구매함");
+        System.out.println("[잔액] "+Person.MONEY);		
 	}
 
 	
@@ -29,11 +30,11 @@ public class Person {
 	}
 
 	public int getMoney() {
-		return money;
+		return MONEY;
 	}
 
 	public void setMoney(int money) {
-		this.money = money;
+		this.MONEY = money;
 	}
 
 	public Product getProb() {

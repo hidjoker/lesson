@@ -31,7 +31,7 @@ class Child03 extends Parent03{
 }
 public class InheritEx_03 {
 	public static void main(String[] args) {
-		Child03 c = new Child03(111);   
+		Child03 c = new Child03();   
 	}
 }
 
