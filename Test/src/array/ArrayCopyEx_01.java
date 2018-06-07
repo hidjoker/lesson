@@ -6,8 +6,7 @@ public class ArrayCopyEx_01 {
 		
 		int[] arr1 = {10, 20, 30};
 		int[] arr2;
-		
-		
+				
 		// 얕은 복사 (shallow copy)
 		// 참조값만 복사될 때
 		
