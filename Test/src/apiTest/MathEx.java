@@ -13,10 +13,8 @@ package apiTest;
 public class MathEx {
 	public static void main(String[] args) {
 		
-		
 		// -10의 절대값
 		System.out.println("-10의 절대값 : "+Math.abs(-10));
-		
 		// 3.7의 올림값
 		System.out.println("3.7의 올림값 : "+Math.ceil(3.7));
 		// 3.7의 내림값
@@ -31,12 +29,7 @@ public class MathEx {
 		System.out.println("-3.7의 올림값 : "+Math.ceil(-3.7));
 		// -3.7의 내림값
 		System.out.println("-3.7의 내림값 : "+Math.floor(-3.7));
-		
-		
-		
-		
-		
+	
 	}
 	
-
 }

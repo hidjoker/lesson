@@ -6,7 +6,7 @@ public class Outer {
 	public static int staticNum=30;
 	
 	
-	public static class StaticInner{
+	public static class StaticInner{ //inner 클래스는 스태틱이 가능함
 		
 		static int num=40;
        
