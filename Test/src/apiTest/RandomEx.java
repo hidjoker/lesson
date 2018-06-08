@@ -20,22 +20,16 @@ public class RandomEx {
 		System.out.println(ran.nextInt(5)); // 0 ~ 4
 		System.out.println(ran.nextInt(5)+11); // 11 ~ 15
 		
-		
 		System.out.println("------------");
 		// 1~100 난수중 5개를 int[]에 담기
 		int[] arr = new int[5];
 		for(int i=0;i<5;i++) {
 			arr[i] = ran.nextInt(100)+1; //1~100 사이에 난수
 		}
-		
 		for(int num : arr) {
 			System.out.print(num+" ");
 		}
 		System.out.println();
-		
-		
-		
-		
 		
 	}	
 }
