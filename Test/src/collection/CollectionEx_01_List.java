@@ -1,5 +1,33 @@
 package collection;
 
+//+ interface List
+//- 리스트
+//- 데이터를 일렬로 배치하는 자료구조
+//- 1차원 구조
+//- 선형 구조
+//- 요소를 인덱스로 관리
+//- 리스트에 요소가 추가될 때 자동으로 인덱스가 부여된다
+//- 데이터의 순서를 유지한다
+//
+//
+//+ List의 구현체(Class)
+//
+//- class ArrayList
+//	배열과 같은 동작
+//	배열과 달리 공간 확장 가능
+//	다른 List에 비해 빠른 편
+//	단방향 포인터
+//
+//- class LinkedList
+//       양방향 포인터
+//
+//
+//- class Vector
+//	ArrayList와 동작이 같음
+//	동기화처리되어있음
+//	capacity 사용
+
+
 import java.util.ArrayList;
 import java.util.List;
 
