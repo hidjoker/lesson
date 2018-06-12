@@ -19,7 +19,7 @@ public class CollectionEx_03_List {
 		
 		Iterator iter;
 		iter = list.iterator();
-		
+		System.out.println(iter);
 		while( iter.hasNext() ) {
 			System.out.println( iter.next() );
 		}
