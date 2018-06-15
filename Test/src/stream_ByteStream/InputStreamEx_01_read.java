@@ -41,9 +41,6 @@ package stream_ByteStream;
 //     읽은 데이터를 b배열의 off 인덱스부터 기록한다
 //     읽은 데이터의 길이를 int형으로 반환한다
 
-
-
-
 import java.io.IOException;
 import java.io.InputStream;
 
