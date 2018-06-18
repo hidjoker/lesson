@@ -23,7 +23,7 @@ public class OutputStreamEx_01_Write {
 		
 	    OutputStream os;
 	    
-	    os = System.out; //PrintStream(System.out)(자식클래스) -> OutputStream(부모클래스)
+	    os = System.out; //PrintStream(자식클래스) -> OutputStream(부모클래스)
 	    
 //	    os.println(); //println 메소드는 자식클래스 메소드이므로 사용못함
 	    

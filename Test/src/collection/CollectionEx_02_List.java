@@ -18,7 +18,7 @@ public class CollectionEx_02_List {
 		List list1 = new ArrayList();
 		List<String> list2 = new ArrayList<>(); // <>앞에만 한정해줘도 됨(자바 1.8v)
 		List<Integer> list3 = new ArrayList<Integer>();
-		//<>제네릭 : 데이트 타입 한정해줌
+		//<>제네릭 : 데이터 타입 한정해줌
 		
 		
 //		list2.add(123);
@@ -36,6 +36,7 @@ public class CollectionEx_02_List {
 		List stringList
 			= Arrays.asList("Alice","Bob","Clare");
 		System.out.println(stringList);
+		
 		
 	}
 }

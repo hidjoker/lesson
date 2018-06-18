@@ -10,7 +10,7 @@ public class OutputStreamEx_02_Write {
 		
 	    OutputStream os;
 	    
-	    os = System.out; //PrintStream(System.out)(자식클래스) -> OutputStream(부모클래스)
+	    os = System.out; //PrintStream(자식클래스) -> OutputStream(부모클래스)
 
 	    byte[] buf = new byte[1024];
 	    

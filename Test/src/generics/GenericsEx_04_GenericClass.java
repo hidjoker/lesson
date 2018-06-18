@@ -43,6 +43,6 @@ public class GenericsEx_04_GenericClass {
 		c04.setObj("Apple");
 		String fruit = c04.getObj();
 		System.out.println("°úÀÏ : "+fruit);
-		
+		c04.display(fruit);
 	}
 }

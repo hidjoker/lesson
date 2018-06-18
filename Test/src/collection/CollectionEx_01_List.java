@@ -78,8 +78,7 @@ public class CollectionEx_01_List {
 		System.out.println("--------");
 		for(Object s : list) {
 			System.out.println(s);
-		}
-		
+		}		
 		
 		System.out.println("--------");
 		list.add(100);

@@ -7,6 +7,7 @@ import java.util.Hashtable;
 import java.util.Map;
 import java.util.Properties;
 
+
 public class CollectionEx_11_Map {
 	
 	public static void main(String[] args) {
@@ -17,7 +18,7 @@ public class CollectionEx_11_Map {
 		Properties prop = new Properties();
 		
 		try {
-			prop.load(new FileReader("./src/collection/user.properties"));
+			prop.load(new FileReader("./Test/src/collection/user.properties"));
 		} catch (FileNotFoundException e) { // 예외처리
 			// TODO Auto-generated catch block
 			e.printStackTrace();

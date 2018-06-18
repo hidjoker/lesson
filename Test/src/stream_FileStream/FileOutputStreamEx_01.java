@@ -18,7 +18,7 @@ public class FileOutputStreamEx_01 {
 		try {
 			fos = new FileOutputStream(file);
 			fos.write(65); // A 출력, throws. IOException 예외 처리
-			fos.write('C'); // 66 출력 (주체 프로그램)
+			fos.write('C'); // 66 출력
 			
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();

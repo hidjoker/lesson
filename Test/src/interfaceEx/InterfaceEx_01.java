@@ -15,7 +15,7 @@ class Parent{
 }
 
 
-class ClassTest extends Parent
+class ClassTest extends Parent 
                 implements Inter_02, Inter_03 {   //인터페이스와 클래스의 상속 out매소드는 하나로 처리 
 	@Override
 	public void out() {

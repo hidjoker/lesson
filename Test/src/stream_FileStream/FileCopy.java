@@ -42,11 +42,16 @@ public class FileCopy {
 		} finally {
 				try {
 					if(fis!=null) fis.close();
-					if(fos!=null) fos.close();
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
 			
+				try {
+					if(fos!=null) fos.close();
+				} catch (IOException e) {
+						e.printStackTrace();
+				}
+
 		}
 		
 		

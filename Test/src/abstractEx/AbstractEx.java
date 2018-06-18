@@ -35,7 +35,7 @@ package abstractEx;
 // 추상클래스
 abstract class Person{
 	public String name; //이름
-	
+		
 	// 추상메소드
 	public abstract void out();
 }
