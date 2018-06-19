@@ -14,7 +14,7 @@ public class Ex08_ObjectInputStream {
 		
 		// 파일 객체 생성
 		File file = new File(
-				"./src/stream_FilterStream"
+				"./Test/src/stream_FilterStream"
 				,"ObjectTest");
 		
 		// 입력 스트림 선언
@@ -39,7 +39,7 @@ public class Ex08_ObjectInputStream {
 				}else if(list.get(i) instanceof Point) {
 					// Point 클래스 객체(인스턴스)
 					System.out.println(
-							((Point)list.get(i)).getY());
+							((Point)list.get(i)));
 				}
 			}
 

@@ -24,6 +24,8 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.ObjectInputStream;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Ex06_ObjectInputStream {
 
@@ -42,10 +44,10 @@ public class Ex06_ObjectInputStream {
 			fis = new FileInputStream(file);
 			ois = new ObjectInputStream(fis);
 			
-			Point p1 = (Point) ois.readObject();
+			Point p1 = (Point)ois.readObject();
 			System.out.println(p1);
-			
 			System.out.println(ois.readObject());
+			
 
 		} catch (FileNotFoundException e) { e.printStackTrace();
 		} catch (IOException e) { e.printStackTrace();

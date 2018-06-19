@@ -15,7 +15,7 @@ public class Ex07_ObjectOutputStream_List {
 
 		// 파일 객체 생성
 		File file = new File(
-				"./src/stream_FilterStream"
+				"./Test/src/stream_FilterStream"
 				,"ObjectTest");
 		
 		// 출력 스트림 선언
