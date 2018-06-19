@@ -13,7 +13,7 @@ public class Ex05_DataInputStream {
 		// 파일 객체 생성
 		
 		File file = new File(
-				"./Test/src/stream_FilterStream"
+				"./src/stream_FilterStream"
 				,"DataTest");
 		
 		// 파일 입력 스트림 선언
