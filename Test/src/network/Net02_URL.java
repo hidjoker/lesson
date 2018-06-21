@@ -38,8 +38,7 @@ public class Net02_URL {
 		System.out.println(
 				"파일경로 : "+url.getFile());
 		System.out.println(
-				"전체 : "+url.toExternalForm());
-		
+				"전체 : "+url.toExternalForm());		
 	
 	}
 	

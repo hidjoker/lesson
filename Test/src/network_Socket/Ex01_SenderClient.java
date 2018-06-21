@@ -26,16 +26,17 @@ public class Ex01_SenderClient {
 			
 			//--------데이터 통신 -------------
 			
-			String msg = null; // 메시지
+			StringBuffer msg = new StringBuffer();
 			while(true){
 				// 전송할 내용 입력
 				System.out.println("\t보낼 메시지 : ");
-				msg = sc.nextLine();
+				msg.append(sc.nextLine());
 				
-				if("EXIT".equals(msg)) break;
+				if("EXIT".equals(new String(msg))) break;
 			
 				// 서버로 전송
 				out.println(msg);
+				msg.delete(0, msg.length());
 			}
 			
 			//-------------------------------
