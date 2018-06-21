@@ -33,16 +33,12 @@ class ThreadTest01 extends Thread{
 	public void run() {
 	
 		for(int i=0 ; i<100 ; i++) {
-			System.out.println("ThreadTest : "+i);
-			
+			System.out.println("ThreadTest : "+i);		
 			try {
 				Thread.sleep(100);
 			} catch (InterruptedException e) {}
-			
 		}
-	
 	}
-	
 }
 
 
@@ -53,7 +49,6 @@ public class ThreadEx_01_classThread {
 		ThreadTest01 tt = new ThreadTest01();
 		ThreadTest01 tt2 = new ThreadTest01();
 
-		
 		tt.start(); //스레드 실행
 		tt2.start();
 		
@@ -61,13 +56,12 @@ public class ThreadEx_01_classThread {
 		
 		for(int i=0 ; i<100 ; i++) {
 			System.out.println("Main : "+i);
-			
+	
 			try {
 				Thread.sleep(100);
 			} catch (InterruptedException e) {}
 			
 		}
-		
 		
 		
 	}
