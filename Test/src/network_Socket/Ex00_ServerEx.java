@@ -48,6 +48,15 @@ public class Ex00_ServerEx {
 			
 		} catch (IOException e) {
 			e.printStackTrace();
+		}finally {
+			try {
+				if(in!=null)in.close();
+				if(sock!=null)sock.close();
+				if(servSock!=null)servSock.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			
 		}
 		
 		

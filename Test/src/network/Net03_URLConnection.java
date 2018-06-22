@@ -60,6 +60,10 @@ public class Net03_URLConnection {
 			e.printStackTrace();
 		} catch (IOException e) {
 			e.printStackTrace();
+		}finally {
+				try {
+					if(reader!=null) reader.close();
+				} catch (IOException e) {}		
 		}
 		
 		

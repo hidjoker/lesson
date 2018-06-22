@@ -26,9 +26,12 @@ public class FileReaderEx {
 			reader = new FileReader(file);
 			br = new BufferedReader(reader);
 			
-			while((len=reader.read(cbuf))!=-1) {
-				System.out.print(new String(cbuf,0,len));
-				Arrays.fill(cbuf, '\0'); //(char)0
+			while((len=br.read(cbuf))!=-1) {
+//				System.out.print(
+//				new String(cbuf, 0, len) );
+			
+			System.out.print(cbuf);
+			Arrays.fill(cbuf, '\0' ); // (char)0
 				
 			}
 		} catch (FileNotFoundException e) {

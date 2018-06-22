@@ -39,7 +39,7 @@ public class Ex08_ObjectInputStream {
 				}else if(list.get(i) instanceof Point) {
 					// Point 클래스 객체(인스턴스)
 					System.out.println(
-							((Point)list.get(i)).getY());
+							((Point)list.get(i)));
 				}
 			}
 

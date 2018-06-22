@@ -50,7 +50,6 @@ public class Ex02_EchoClient {
 				out.println(msg);
 				
 				msg= in.readLine();
-				if(msg==null) break;
 				System.out.println("받은메시지 : " + msg);
 				
 			}

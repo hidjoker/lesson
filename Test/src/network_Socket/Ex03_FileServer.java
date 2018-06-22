@@ -1,6 +1,7 @@
 package network_Socket;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -16,7 +17,7 @@ public static void main(String[] args) {
 	Socket sock = null; //연결 소켓
 	
 	File file = new File("./src/network_Socket/","result.txt"); // 파일 객체 생성
-	FileWriter fw = null; // 파일 출력 스트림
+	BufferedWriter out = null; // 파일 출력 스트림
 	BufferedReader in = null; // 보조 출력 스트림
 	
 	char[] cbuf = new char[1024]; //입력 보조 버퍼
@@ -30,13 +31,13 @@ public static void main(String[] args) {
 		
 		System.out.println("연결완료!!!");
 		
-		fw=new FileWriter(file);
+		out=new BufferedWriter(new FileWriter(file));
 		in=new BufferedReader(
 				new InputStreamReader(
 						sock.getInputStream()));
 		
 		while((len=in.read(cbuf))!=-1) {
-			fw.write(cbuf,0,len);
+			out.write(cbuf,0,len);
 			total+=len;
 		}
 				
@@ -49,7 +50,7 @@ public static void main(String[] args) {
 	}finally {
 		try {
 			if(in!=null)in.close();
-			if(fw!=null)fw.close();
+			if(out!=null)out.close();
 			if(sock!=null)sock.close();
 			if(servSk!=null)servSk.close();
 		} catch (IOException e) {
