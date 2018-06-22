@@ -20,7 +20,8 @@ public class Client_1on1 {
 			//--------------------
 			
 		} catch (IOException e) {
-			e.printStackTrace();
+//			e.printStackTrace();
+			System.out.println("+ + + 통신 종료 + + + ");
 		}
 	}
 	

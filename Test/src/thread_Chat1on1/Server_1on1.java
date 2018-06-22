@@ -25,7 +25,8 @@ public class Server_1on1 {
 			//--------------------
 			
 		} catch (IOException e1) {
-			e1.printStackTrace();
+//			e.printStackTrace();
+			System.out.println("+ + + 통신 종료 + + + ");
 		}
 		
 	}
