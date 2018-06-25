@@ -11,9 +11,10 @@ class SyncTest02 extends Thread{
 			total += i;
 		   }
 		
-		notify(); //LOCK 반납(임계영역 해제)  main 다시 run
-		
-	    }
+//		notify(); //LOCK 반납(임계영역 해제)  main 다시 run
+		}
+		System.out.println("자동 임계영역 해제");
+
 	}
 }
 
@@ -25,7 +26,9 @@ public class WaitNotifyEx_02 {
 		st.start();
 		synchronized(st) {
 			try {
+				System.out.println("waiting 중");
 				st.wait(); // LOCK 반납(임계영역 해제)
+				System.out.println("waiting 끝");
 			} catch (InterruptedException e) {}
 			
 			System.out.println("1~100의 합 : "+st.total);

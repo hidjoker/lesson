@@ -30,7 +30,7 @@ public class ThreadEx_06_StackTrace {
 		ThreadDemo td = new ThreadDemo();
 		td.start(); // 추가 스레드의 스택트레이스
 		td.runMethod1(); // 메인 스레드의 스택트레이스
-		
+
 		
 		
 		

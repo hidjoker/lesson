@@ -23,6 +23,7 @@ class Input extends Thread{
 			
 			data.available = true; // 연산 완료 상태 알림
 			data.notifyAll(); // 임계영역 작업완료 통지
+			System.out.println("임계영역해제");
 		}
 		System.out.println("--- Input End ---");
 	}
