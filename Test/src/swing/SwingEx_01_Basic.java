@@ -2,12 +2,41 @@ package swing;
 
 import javax.swing.JFrame;
 
+
+// + 스윙, Swing
+//  - AWT를 이용하여 작성된 자바의 GUI 라이브러리
+//  - AWT의 모든 기능을 가지고 있다
+//  - 대부분의 스윙 클래스는 앞에 J가 붙어있다
+//      ex)  AWT         ->      Swing
+//           Component ->   JComponent
+//           Frame        ->     JFrame
+//           Button       ->     JButon
+//           Label         ->     JLabel
+//  - javax.swing 패키지에 포함
+//  - 스윙의 최상위 클래스 : JComponent
+          
+
+
+
 public class SwingEx_01_Basic {
 
 	public static void main(String[] args) {
 		
 		//프레임 설정
 		JFrame frame = new JFrame("스윙GUI");
+		
+//		 + 기본 컨테이너(메인 프레임)을 생성하는 방법
+//		  1. JFrame 객체를 생성해서 프레임 띄우기
+//		     JFrame jfr = new JFrame();
+//		     jfr.setVisible(true);
+//
+//		  2. JFrame 클래스를 상속받아서 프레임 띄우기
+//		     public class MyFrame extends JFrame{        
+//		       public MyFrame() {
+//		          setvisible(true);
+//		       }
+//		    }
+
 		
 		//프레임 위치와 크기 설정
 		frame.setLocation(100, 100);

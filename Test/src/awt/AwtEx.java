@@ -1,5 +1,31 @@
 package awt;
 
+// + GUI , Graphic User Interface
+// <ㅡ> CLI , Command Line Interface
+//
+// + 자바의 GUI 
+//  - JDK API에 포함되어있음
+//  - AWT
+//  - Swing
+//  - JavaFX
+//
+// + 자바 GUI 프로그램의 구성요소
+// 1. 컨테이너, Container
+//     윈도우(창, window) 역할을 하는 요소
+//     프로그램의 구성 요소들이 올라가는 곳
+//     ex) Frame, Window, Panel, Dialog, Applet
+// 2. 컴포넌트, Component
+//     컨테이너 위에 올려지는 화면 구성 요소
+//     ex)Button, TextField, Label, List, CheckBox 등등
+// 3. 배치관리자, LayoutManager
+//     컨테이너에 컴포넌트가 배치될 크기와 위치를 결정하는 요소
+//     ex) BoarderLayout, GridLayout, FlowLayout, CardLayout 등등
+// 4. 이벤트, Event
+//     사용자의 동작(입력)에 대한 반응을 결정하는 요소
+//     (주로 컴포넌트의 반응) 
+
+
+
 import java.awt.Button;
 import java.awt.Color;
 import java.awt.Frame;
@@ -10,6 +36,14 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
+
+// + AWT, Abstract Window Toolkit
+// - 추상 윈도우(창) 개발도구
+// - java.awt 패키지에 포함
+// - 운영체제가 가지고 있는 GUI(그래픽) 표현법을 사용한다
+// - 운영체제에 따라서 모양(테마)가 바뀐다
+// - 단순히 운영체제와 프로그램을 어어주는 GUI 라이브러리이다
+
 
 public class AwtEx {
 	
