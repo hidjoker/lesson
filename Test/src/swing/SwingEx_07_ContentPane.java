@@ -1,12 +1,15 @@
 package swing;
 
+import java.awt.Color;
 import java.awt.Container;
+import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
@@ -24,6 +27,18 @@ public class SwingEx_07_ContentPane extends JFrame implements ActionListener{
 	private JButton btnBye;
 	private JButton btnChange;
 	//---------------------------
+	
+	// 두 번째 판넬
+	
+	private JPanel pane2;
+	private JPanel pane2sub;
+	
+	private JButton btnOk;
+	private JButton btnCancel;
+	private JButton btnChange2;
+	private JLabel lbDesc;
+	//---------------------------
+	
 	
 	
 	//---메뉴 구성에 필요한 변수---
@@ -59,8 +74,36 @@ public class SwingEx_07_ContentPane extends JFrame implements ActionListener{
 		root = getContentPane();
 		
 		initPane(); //첫 번쨰 판넬 설정하기
+		initPane2(); //두 번째 판넬 설정하기
+		
 		
 		root.add(pane); //메인프레임에 첫 번쨰 판넬 추가하기 
+		root.add(pane2); //메인프레임에 두 번째 판넬 추가하기
+	}
+
+	private void initPane2() {
+		pane2 = new JPanel();
+		pane2sub = new JPanel();
+		
+		btnOk = new JButton("확인");
+		btnCancel = new JButton("취소");
+		btnChange2 = new JButton("바꾸기");
+		
+		pane2.setLayout(new GridLayout(2, 0));
+		pane2sub.add(btnOk);
+		pane2sub.add(btnCancel);
+		pane2sub.add(btnChange2);
+		
+		pane2.add(pane2sub);
+		lbDesc = new JLabel("두번째 컨테이너입니다");
+		lbDesc.setHorizontalAlignment(JLabel.CENTER);
+		
+		pane2.setBackground(Color.CYAN);
+		pane2.add(lbDesc);
+		
+		btnOk.addActionListener(this);
+		btnCancel.addActionListener(this);
+		btnChange2.addActionListener(this);
 		
 	}
 
@@ -158,8 +201,25 @@ public class SwingEx_07_ContentPane extends JFrame implements ActionListener{
 			
 			
 		}else if(e.getSource() == btnChange) {
-		
+			root.remove(pane);
+			root.add(pane2);
 			
+			root.validate();
+			root.repaint();	
+	
+		}else if(e.getSource() == btnOk) {
+			lbDesc.setText("확인!!!!!!!!!!!!");
+			
+		}else if(e.getSource() == btnCancel) {
+			lbDesc.setText("취소!!!!!!!!!!!!");
+			
+		}else if(e.getSource() == btnChange2) {
+
+			root.remove(pane2);
+			root.add(pane);
+			
+			root.validate();
+			root.repaint();		
 		}
 		
 	}
