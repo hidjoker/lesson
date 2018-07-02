@@ -11,7 +11,6 @@ public class ClassEx_02 {
 //		num1 = 10;  //멤버정의 영역에 수행코드 작성 불가
 		
 		
-		
 	public static void main(String[] args) {
 		
 

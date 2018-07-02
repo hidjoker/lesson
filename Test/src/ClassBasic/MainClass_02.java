@@ -7,6 +7,7 @@ public class MainClass_02 {
 	
 		int num1 = 111;
 		int num2 = 222;
+		
 	
 //		num1 = 10;  //멤버정의 영역에 수행코드 작성 불가
 		
